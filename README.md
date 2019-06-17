@@ -61,9 +61,20 @@ NEO cli. Type 'help' to get started
 neo>
 ```
 
-It means we have connected to the private network. Wait for a while for the neo-python client in the terminal to sync, you can check syncing status by using the command 
+It means we have connected to the private network. Wait for a while for the neo-python client in the terminal to sync, you can check synching status by using the command 
 
-`show state`.
+`show state`
+
+You will see some info like this showing the status of syncing. In the example below, 100 blocks have been synched from the private network to the neo-python client node.
+```
+neo> show state
+Progress: 100 / 4588
+Block-cache length 1
+Blocks since program start 100
+Time elapsed 0.43487291666666666 mins
+Blocks per min 229.9522370041056
+TPS: 4.100814893239884
+```
 
 7. Create a new wallet or open an existing wallet
 
