@@ -102,5 +102,5 @@ Total operations: 39
 Results [{'type': 'Integer', 'value': '5'}]
 Invoke TX GAS cost: 0.0
 Invoke TX fee: 0.0001
-
-You can see result in Results field, Enter incorrect password to prevent to submit transaction network
+```
+You can see the result in the results field. You can enter an incorrect password if you do not want to submit the transaction to the private network.
