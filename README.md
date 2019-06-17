@@ -60,12 +60,17 @@ Wallet need to have NEO and GAS to able deploy contract. Next we start to compil
 
 # Compile & Deploy smart contract to private network
 ---------------
-1. To build contract use command `neo> sc build {path to python file}` example:
+1. To build contract use command "neo> sc build {path to python file}", for example:
+
 `neo> sc build /projects/neo-sample-python-sc/smart-contract/sample.py`
-2. To deploy contract use command `neo>sc deploy {path to .avm file} False False False 070202 02`
-And Enter Contract Information detail to deploy.
-example: `neo> sc deploy /projects/neo-sample-python-sc/smart-contract/sample.avm False False False 070202 02`
-3. When finish to deploy wait little and view detail contract to get contract address to config on FrontEnd
+
+2. To deploy contract use command "neo>sc deploy {path to .avm file} False False False 070202 02"
+And Enter Contract Information detail to deploy. For example: 
+
+`neo> sc deploy /projects/neo-sample-python-sc/smart-contract/sample.avm False False False 070202 02`
+
+3. Wait for the deployment to finish and view the detail of the smart contract to get the contract address which is usually used by the fronend application to interact with the smart contract.
+
 Example:
 ```
 Creating smart contract....
@@ -82,9 +87,9 @@ Creating smart contract....
     "script": "011ac56b6a00527ac46a51527ac4586a52527ac4074e4744205045546a53527ac4034e50546a54527ac46a00c30b746f74616c537570706c79876406006c7566616a00c3046e616d65876409006a53c36c7566616a00c30673796d626f6c8764...
 ```
 4. Test invoke smart contract
-```
-neo> sc invoke {script_hash} {paramters}
-```
+
+Use the command "sc invoke {script_hash} {paramters}"
+
 Example:
 ```
 neo> sc invoke 0x1d36641faca64ddd0f49af488e543a0f89860690 add 02 03
