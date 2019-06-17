@@ -1,6 +1,6 @@
-# An NEO dApp demo
+# Python Smart Contract sample
 
-This is a repository for a petshop Dapp demo which is running on NEO blockchain. The project itself does not contain any business purpose and is only used for learning. The project is utilizing following things :
+This is a simple Python smart contract sample that is mainly to show the steps of compile. deploy and test a Python smart contract on a Neo private network on Morpheus Labs Blockchain Platform as a Service.
 
 ## Setup Env
 ---------------------------------
