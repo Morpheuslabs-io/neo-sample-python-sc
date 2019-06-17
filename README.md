@@ -6,7 +6,7 @@ If you are not familiar with the ML BPaaS yet, you may refer to "https://docs.mo
 
 - create a new Blockchain in Blockchain Ops
 - download an application from Application Library
-- Create a new workspace
+- create a new workspace
 - Use CDE
 
 
