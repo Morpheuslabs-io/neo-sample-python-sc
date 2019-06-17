@@ -106,3 +106,5 @@ Invoke TX GAS cost: 0.0
 Invoke TX fee: 0.0001
 ```
 You can see the result in the results field. You can enter an incorrect password if you do not want to submit the transaction to the private network.
+
+You can use the IDE to open and explore the smart contract.
