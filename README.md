@@ -4,10 +4,9 @@ This is a simple Python smart contract sample that is mainly to show the steps o
 
 If you are not familiar with the ML BPaaS yet, you may refer to "https://docs.morpheuslabs.io/docs/overview" understand the basic concept and the operations required:
 
-- create a new Blockchain in Blockchain Ops
-- download an application from Application Library
-- create a new workspace
-- Use CDE
+- create a new Neo private network in "Blockchain Ops - Neo"
+- download apps using Application Library
+- Manage workspace in CDE
 
 
 ## Setup Env
@@ -15,8 +14,10 @@ If you are not familiar with the ML BPaaS yet, you may refer to "https://docs.mo
 1. Create a Neo private network on "Blockchain Ops"
 2. Download "Try Neo Python Smart Contract" from Application Library into My Repository
 3. Create a new workspace using the newly downloaded application in My Repository
-4. Start and open the newly created workspace
-5. In the terminal, use the command "np-config {internal P2P URL} {internal RPC URL}" to connect neo-python to the private network
+4. Start and open the newly created workspace in CDE
+5. Connect neo-python client in CDE to the private network
+
+In the terminal, use the command "np-config {internal P2P URL} {internal RPC URL}" to connect neo-python to the private network
 
 For example:
 
@@ -44,7 +45,9 @@ For example:
 ]
 ```
 
-6. In the terminal,  enter command `np-prompt -p` to connnect to the private network
+6. Connect to the private network
+
+In the terminal,  enter command `np-prompt -p` to connnect to the private network
 
 You should see something like this:
 
@@ -62,7 +65,9 @@ It means we have connected to the private network. Wait for a while for the neo-
 
 `show state`.
 
-7. Enter `neo> wallet create ./mywallet` and fill in a password to create a new wallet. Or open an existing wallet `neo> wallet open {path to wallet file}`
+7. Create a new wallet or open an existing wallet
+
+Enter `neo> wallet create ./mywallet` and fill in a password to create a new wallet. Or open an existing wallet `neo> wallet open {path to wallet file}`
 
 8. Import the default account of the private network to the wallet 
 
@@ -70,8 +75,16 @@ It means we have connected to the private network. Wait for a while for the neo-
 
 This default account has NEO and GAS tokens for you to perform various transactions on the private network.
 
-10. Rebuild wallet after import `neo> wallet rebuild`
-11. Check NEO and GAS in wallet `neo> wallet` focus to check `percent_synced` and `synced_balances`
+9. Rebuild the wallet after import 
+
+`neo> wallet rebuild`
+
+10. Check NEO and GAS in the wallet 
+
+`neo> wallet` 
+
+Check `percent_synced` and `synced_balances`
+
 ```
     "percent_synced": 100,
     "synced_balances": [
@@ -79,25 +92,34 @@ This default account has NEO and GAS tokens for you to perform various transacti
         "[NEOGas]: 30525.98755 "
     ],
 ```
-Wallet need to have NEO and GAS to able deploy contract. Next we start to compile and deploy NEP contract to private network.
+The wallet needs to have NEO and GAS to able deploy contract.
 
-# Compile & Deploy smart contract to private network
----------------
-1. To build contract use command "neo> sc build {path to python file}", for example:
+Next, we will compile the smart contract, deploy and test the smart contract using the private network.
+
+# Compile & Deploy & Test the smart contract
+--------------------------------------------
+
+1. Compile and build the smart contract 
+
+use the command "neo> sc build {path to python file}", for example:
 
 `neo> sc build /projects/neo-sample-python-sc/smart-contract/sample.py`
 
-2. To deploy contract use command "neo>sc deploy {path to .avm file} False False False 070202 02"
+2. Deploy the smart contract 
 
-and enter the details of the contract information and provide the password of the wallet to complete the deployment. 
+Enter the command "neo>sc deploy {path to .avm file} False False False 070202 02"
+
+Then enter the details of the contract information and provide the password of the wallet to complete the deployment. 
 
 The example of the command: 
 
 `neo> sc deploy /projects/neo-sample-python-sc/smart-contract/sample.avm False False False 070202 02`
 
-3. Wait for the deployment to finish and view the detail of the smart contract to get the contract address which is usually used by the fronend application to interact with the smart contract.
+3. Get the script hash of the smart contract
 
-Example:
+Wait for the deployment to finish and view the detail of the smart contract to get the script hash of the contract address which is usually used by the client application to involke or call the smart contract functions.
+
+Example of the details of smart contract:
 ```
 Creating smart contract....
                  Name: Sample
@@ -109,17 +131,19 @@ Creating smart contract....
  Needs Dynamic Invoke: False
            Is Payable: False
 {
-    "hash": "0xb6730fd741b632401f89020409c6c0415d97dcee", //script hash of contract 
+    "hash": "0xb6730fd741b632401f89020409c6c0415d97dcee", //script hash of the smart contract
     "script": "011ac56b6a00527ac46a51527ac4586a52527ac4074e4744205045546a53527ac4034e50546a54527ac46a00c30b746f74616c537570706c79876406006c7566616a00c3046e616d65876409006a53c36c7566616a00c30673796d626f6c8764...
 ```
-4. Test invoke smart contract
+4. Test the smart contract
 
-Use the command "sc invoke {script_hash} {paramters}"
+Invoke the smart contract function using the command "sc invoke {script_hash} {paramters}"
 
-Example (please replace the hash in the command with the hash in your smart contract):
+Example (please replace the script hash in the command with the hash in your smart contract):
 ```
 neo> sc invoke 0xb6730fd741b632401f89020409c6c0415d97dcee add 02 03
 ```
+
+Below is an example of the test result:
 
 ```
 Test invoke successful
@@ -128,6 +152,8 @@ Results [{'type': 'Integer', 'value': '5'}]
 Invoke TX GAS cost: 0.0
 Invoke TX fee: 0.0001
 ```
-You can see the result in the results field. You can enter an incorrect password if you do not want to submit the transaction to the private network.
+You can see the result in the results field. 
 
-You can use the IDE to open and explore the smart contract.
+It will prompt to enter the wallet password, you can enter an incorrect password if you do not want to submit the transaction to the private network.
+
+You can use the IDE to open and explore the smart contract function. You can change the smart contract using CDE and then test it following the steps in "Compile & Deploy & Test the smart contract"
