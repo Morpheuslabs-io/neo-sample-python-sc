@@ -93,9 +93,9 @@ Creating smart contract....
 
 Use the command "sc invoke {script_hash} {paramters}"
 
-Example:
+Example (please replace the hash in the command with the hash in your smart contract):
 ```
-neo> sc invoke 0x1d36641faca64ddd0f49af488e543a0f89860690 add 02 03
+neo> sc invoke 0xb6730fd741b632401f89020409c6c0415d97dcee add 02 03
 ```
 Test invoke successful
 Total operations: 39
