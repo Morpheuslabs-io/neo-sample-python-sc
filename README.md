@@ -4,9 +4,9 @@ This is a simple Python smart contract sample that is mainly to show the steps o
 
 ## Setup Env
 ---------------------------------
-1. Create private net on blockchain ops
-2. Create NEO stack workspace
-3. Open NEO stack workspace
+1. Create private net on "Blockchain Ops"
+2. Create a new workspace using a NEO Stack for developing, compiling and tesing the Python smart contracts.
+3. Open the workspace
 4. Get code from github `git clone https://github.com/Morpheuslabs-io/neo-sample-python-sc`
 5. Next we need to config `neo-python` wallet to point to private net 
 Open information tab of blockchain ops and get the two links:
@@ -38,7 +38,10 @@ neo>
 It meant we connected to private net, wait little bit for neo-python node to sync, you can check syncing status by using command `show state`.
 
 8. Enter `neo> wallet create ./mywallet` and fill in password to create new wallet. Or open wallet if you already have wallet `neo> wallet open {path to wallet file}`
-9. Import new address to wallet `neo> wallet import wif KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr`
+
+9. Import the default account of the private network to the wallet `neo> wallet import wif KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr`
+This default account has NEO and GAS tokens for you to perform various transactions on the private network.
+
 10. Rebuild wallet after import `neo> wallet rebuild`
 11. Check NEO and GAS in wallet `neo> wallet` focus to check `percent_synced` and `synced_balances`
 ```
