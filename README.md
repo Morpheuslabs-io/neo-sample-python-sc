@@ -97,6 +97,8 @@ Example (please replace the hash in the command with the hash in your smart cont
 ```
 neo> sc invoke 0xb6730fd741b632401f89020409c6c0415d97dcee add 02 03
 ```
+
+```
 Test invoke successful
 Total operations: 39
 Results [{'type': 'Integer', 'value': '5'}]
