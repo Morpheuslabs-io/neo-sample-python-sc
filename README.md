@@ -65,7 +65,10 @@ Wallet need to have NEO and GAS to able deploy contract. Next we start to compil
 `neo> sc build /projects/neo-sample-python-sc/smart-contract/sample.py`
 
 2. To deploy contract use command "neo>sc deploy {path to .avm file} False False False 070202 02"
-And Enter Contract Information detail to deploy. For example: 
+
+and enter the details of the contract information and provide the password of the wallet to complete the deployment. 
+
+The example of the command: 
 
 `neo> sc deploy /projects/neo-sample-python-sc/smart-contract/sample.avm False False False 070202 02`
 
