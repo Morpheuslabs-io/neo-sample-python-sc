@@ -40,6 +40,7 @@ It meant we connected to private net, wait little bit for neo-python node to syn
 8. Enter `neo> wallet create ./mywallet` and fill in password to create new wallet. Or open wallet if you already have wallet `neo> wallet open {path to wallet file}`
 
 9. Import the default account of the private network to the wallet `neo> wallet import wif KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr`
+
 This default account has NEO and GAS tokens for you to perform various transactions on the private network.
 
 10. Rebuild wallet after import `neo> wallet rebuild`
