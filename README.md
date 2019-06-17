@@ -1,19 +1,40 @@
 # a simple Python Smart Contract sample
 
-This is a simple Python smart contract sample that is mainly to show the steps of compile. deploy and test a Python smart contract on a Neo private network on Morpheus Labs Blockchain Platform as a Service.
+This is a simple Python smart contract sample that is mainly to show the steps of compile. deploy and test a Python smart contract on a Neo private network on Morpheus Labs Blockchain Platform as a Service (ML BPaaS).
+
+If you are not familiar with the ML BPaaS yet, you may refer to "https://docs.morpheuslabs.io/docs/overview" understand the basic concept and the operations required:
+
+- create a new Blockchain in Blockchain Ops
+- download an application from Application Library
+- Create a new workspace
+- Use CDE
+
 
 ## Setup Env
 ---------------------------------
-1. Create a Neo private net on "Blockchain Ops"
-2. Create a new workspace using a NEO Stack for developing, compiling and tesing the Python smart contracts.
-3. Open the workspace
-4. Get code from github `git clone https://github.com/Morpheuslabs-io/neo-sample-python-sc`
-5. Next we need to config `neo-python` wallet to point to private net 
-Open information tab of blockchain ops and get the two links:
-- `Internal RPC URL: http://bops-t.morpheuslabs.io:33362 (example)`
-- `Internal P2P URL: http://bops-t.morpheuslabs.io:21660 (example)`
-6. Using editor like vim open and change file: `/home/user/.local/lib/python3.6/site-packages/neo/data/protocol.privnet.json`
-Update 2 parameters SeedList and RPCList (example): 
+1. Create a Neo private network on "Blockchain Ops"
+2. Download "Try Neo Python Smart Contract" from Application Library into My Repository
+3. Create a new workspace using the newly downloaded application in My Repository
+4. Start and open the newly created workspace
+5. In the terminal, use the command "np-config {internal P2P URL} {internal RPC URL}" to connect neo-python to the private network
+
+For example:
+
+    `np-config http://bops-t.morpheuslabs.io:21660 http://bops-t.morpheuslabs.io:33362`
+
+Please note that if you restart the workspace, you have to run the command again. Or if you are using a new private blockchain, then you have to run the command with the internal P2P URL and the RPC URL of the new private network.
+
+You can get the internal P2P URL and internal RPC URL from the information tab of blockchain ops as seen in the example below:
+
+- `Internal RPC URL: http://bops-t.morpheuslabs.io:33362`
+- `Internal P2P URL: http://bops-t.morpheuslabs.io:21660`
+
+For information, the command above will update "SeedList" and "RPCList" in the file
+
+`/home/user/.local/lib/python3.6/site-packages/neo/data/protocol.privnet.json`
+
+For example:
+
 ```
 "SeedList": [
     "bops-t.morpheuslabs.io:21660" //using Internal P2P URL without http
@@ -22,8 +43,10 @@ Update 2 parameters SeedList and RPCList (example):
     "http://bops-t.morpheuslabs.io:33362" //using Internal RPC URL with full link
 ]
 ```
-7. Open terminal and enter command `np-prompt -p -v` to connnect to private net
-You should get something like this:
+
+6. In the terminal,  enter command `np-prompt -p` to connnect to the private network
+
+You should see something like this:
 
 ```
 Privatenet useragent '/Neo:2.10.1/', nonce: 977855951
@@ -35,13 +58,13 @@ NEO cli. Type 'help' to get started
 neo>
 ```
 
-It meant we connected to private net, wait little bit for neo-python node to sync, you can check syncing status by using command 
+It means we have connected to the private network. Wait for a while for the neo-python client in the terminal to sync, you can check syncing status by using the command 
 
 `show state`.
 
-8. Enter `neo> wallet create ./mywallet` and fill in password to create new wallet. Or open wallet if you already have wallet `neo> wallet open {path to wallet file}`
+7. Enter `neo> wallet create ./mywallet` and fill in a password to create a new wallet. Or open an existing wallet `neo> wallet open {path to wallet file}`
 
-9. Import the default account of the private network to the wallet 
+8. Import the default account of the private network to the wallet 
 
 `neo> wallet import wif KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr`
 
