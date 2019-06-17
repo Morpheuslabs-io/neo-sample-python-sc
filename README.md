@@ -9,7 +9,7 @@ This is a simple Python smart contract sample that is mainly to show the steps o
 3. Open NEO stack workspace
 4. Get code from github `git clone https://github.com/Morpheuslabs-io/neo-sample-python-sc`
 5. Next we need to config `neo-python` wallet to point to private net 
-Open information tab of blockchain ops and get two links:
+Open information tab of blockchain ops and get the two links:
 - `Internal RPC URL: http://bops-t.morpheuslabs.io:33362 (example)`
 - `Internal P2P URL: http://bops-t.morpheuslabs.io:21660 (example)`
 6. Using editor like vim open and change file: `/home/user/.local/lib/python3.6/site-packages/neo/data/protocol.privnet.json`
