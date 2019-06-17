@@ -8,9 +8,9 @@ If you are not familiar with the ML BPaaS yet, you may refer to "https://docs.mo
 - download apps using Application Library
 - Manage workspace in CDE
 
-If you want to study more anout Neo blockchain and neo-python, you may refer to https://docs.neo.org/en-us/index.html and  https://github.com/CityOfZion/neo-python (you can bypass this step to run the sample python smart contract)
+If you want to study more anout Neo blockchain and neo-python, you may refer to https://docs.neo.org/en-us/index.html and  https://github.com/CityOfZion/neo-python (you can bypass this step to run the sample python smart contract first)
 
-## Setup Env
+## Setup Environment
 ---------------------------------
 1. Create a Neo private network on "Blockchain Ops"
 2. Download "Try Neo Python Smart Contract" from Application Library into My Repository
