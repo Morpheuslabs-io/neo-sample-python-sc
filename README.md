@@ -4,7 +4,7 @@ This is a simple Python smart contract sample that is mainly to show the steps o
 
 ## Setup Env
 ---------------------------------
-1. Create private net on "Blockchain Ops"
+1. Create a Neo private net on "Blockchain Ops"
 2. Create a new workspace using a NEO Stack for developing, compiling and tesing the Python smart contracts.
 3. Open the workspace
 4. Get code from github `git clone https://github.com/Morpheuslabs-io/neo-sample-python-sc`
