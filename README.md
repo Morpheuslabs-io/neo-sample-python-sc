@@ -26,7 +26,7 @@ For example:
 
 Please note that if you restart the workspace, you have to run the command again. Or if you are using a new private blockchain, then you have to run the command with the internal P2P URL and the RPC URL of the new private network.
 
-You can get the internal P2P URL and internal RPC URL from the information tab of blockchain ops as seen in the example below:
+You can get the internal P2P URL and internal RPC URL from the information tab of of the private netowork in Blockchain Ops as seen in the example below:
 
 - `Internal RPC URL: http://bops-t.morpheuslabs.io:33362`
 - `Internal P2P URL: http://bops-t.morpheuslabs.io:21660`
@@ -62,7 +62,7 @@ NEO cli. Type 'help' to get started
 neo>
 ```
 
-It means we have connected to the private network. Wait for a while for the neo-python client in the terminal to sync, you can check synching status by using the command 
+It means that we have connected to the private network. Wait for a while for the neo-python client in the terminal to sync the blocks from the private network. You can check synching status by using the command 
 
 `show state`
 
@@ -95,7 +95,7 @@ This default account has NEO and GAS tokens for you to perform various transacti
 
 `neo> wallet` 
 
-Check `percent_synced` and `synced_balances`
+Check `percent_synced` and `synced_balances` to confirm there are NEO and GAS tokens in the wallet.
 
 ```
     "percent_synced": 100,
@@ -104,7 +104,7 @@ Check `percent_synced` and `synced_balances`
         "[NEOGas]: 30525.98755 "
     ],
 ```
-The wallet needs to have NEO and GAS to able deploy contract.
+The wallet needs to have NEO and GAS to be able to deploy the smart contract.
 
 Next, we will compile the smart contract, deploy and test the smart contract using the private network.
 
@@ -131,7 +131,7 @@ The example of the command:
 
 Wait for the deployment to finish and view the detail of the smart contract to get the script hash of the contract address which is usually used by the client application to involke or call the smart contract functions.
 
-Example of the details of smart contract:
+Example of the details of the smart contract:
 ```
 Creating smart contract....
                  Name: Sample
