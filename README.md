@@ -168,4 +168,29 @@ You can see the result in the results field.
 
 It will prompt to enter the wallet password, you can enter an incorrect password if you do not want to submit the transaction to the private network.
 
-You can use the IDE to open and explore the smart contract function. You can change the smart contract using CDE and then test it following the steps in "Compile & Deploy & Test the smart contract"
+You can use the IDE to open and explore the smart contract function. You can change the smart contract using CDE.
+
+The original python smart contract:
+
+```
+def Main(operation, a, b):
+
+    if operation == 'add':
+        return a + b
+
+    elif operation == 'sub':
+        return a - b
+
+    elif operation == 'mul':
+        return a * b
+
+    elif operation == 'div':
+        return a / b
+
+    else:
+        return -1
+```
+
+You can make minor changes to `return a + b + 1` and then save the change in IDE.
+
+Then test the changes following the steps in "Compile & Deploy & Test the smart contract".
