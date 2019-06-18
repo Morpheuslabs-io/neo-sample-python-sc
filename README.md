@@ -194,3 +194,9 @@ def Main(operation, a, b):
 You can make minor changes to `return a + b + 1` and then save the change in IDE.
 
 Then test the changes following the steps in "Compile & Deploy & Test the smart contract".
+
+You can see the retuen value has been changed to "6".
+
+```
+Results [{'type': 'Integer', 'value': '6'}]
+```
