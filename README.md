@@ -108,7 +108,7 @@ The wallet needs to have NEO and GAS to be able to deploy the smart contract.
 
 Next, we will compile the smart contract, deploy and test the smart contract using the private network.
 
-# Compile & Deploy & Test the smart contract
+## Compile & Deploy & Test the smart contract
 --------------------------------------------
 
 1. Compile and build the smart contract 
