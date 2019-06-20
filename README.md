@@ -209,3 +209,4 @@ Some tips to help resolve the issues:
 
 - Delete and create a new Neo privte network, if you encounter insuffient GAS for your smart contract deployment. Then you may need to do all the steps again
 - Stop and restart the workspace, if encountered unexpected errors when executing the commands
+- Since this exercise is more for learning purpose, by troubleshooting, you can get more familiar with the platform and also the Neo Python client environment.
