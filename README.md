@@ -1,4 +1,4 @@
-# a simple Python Smart Contract sample
+# A simple Python Smart Contract sample
 
 This is a simple Python smart contract sample that is mainly to *show the steps to compile. deploy and test a Python smart contract on a Neo private network on Morpheus Labs Blockchain Platform as a Service (ML BPaaS)*.
 
