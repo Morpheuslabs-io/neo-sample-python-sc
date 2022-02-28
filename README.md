@@ -22,14 +22,14 @@ In the terminal, use the command "np-config {internal P2P URL} {internal RPC URL
 
 For example:
 
-    `np-config http://bops-t.morpheuslabs.io:21660 http://bops-t.morpheuslabs.io:33362`
+    `np-config http://bops-t.morpheuslabs.io:21660 http://bops.morpheuslabs.io:33362`
 
 Please note that if you restart the workspace, you have to run the command again. Or if you are using a new private blockchain, then you have to run the command with the internal P2P URL and the RPC URL of the new private network.
 
 You can get the internal P2P URL and internal RPC URL from the information tab of of the private netowork in Blockchain Ops as seen in the example below:
 
-- `Internal RPC URL: http://bops-t.morpheuslabs.io:33362`
-- `Internal P2P URL: http://bops-t.morpheuslabs.io:21660`
+- `Internal RPC URL: http://bops.morpheuslabs.io:33362`
+- `Internal P2P URL: http://bops.morpheuslabs.io:21660`
 
 For information, the command above will update "SeedList" and "RPCList" in the file
 
@@ -39,10 +39,10 @@ For example:
 
 ```
 "SeedList": [
-    "bops-t.morpheuslabs.io:21660" //using Internal P2P URL without http
+    "bops.morpheuslabs.io:21660" //using Internal P2P URL without http
 ],
 "RPCList": [
-    "http://bops-t.morpheuslabs.io:33362" //using Internal RPC URL with full link
+    "http://bops.morpheuslabs.io:33362" //using Internal RPC URL with full link
 ]
 ```
 
